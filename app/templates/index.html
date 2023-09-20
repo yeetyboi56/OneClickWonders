@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+            font-size: 48px
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <header class="h-hero bg-hero-image bg-no-repeat bg-cover bg-center text-white">
+        <div class="relative h-full max-w-screen-xl flex flex-col justify-center items-center mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold">Plan your best route</h1>
+            <h2 class="mt-6 text-2xl md:text-3xl">One Click Wonders is a powerful route planner, with focus on
+                integrating ride-sharing and public transport.</h2>
+
+            <div class="mt-16 space-x-8">
+                <a href="{{ url_for('login.login') }}"
+                   class="a-cta-white">Login</a>
+                <a href="{{ url_for('register.register') }}"
+                   class="a-cta-white">Register</a>
+            </div>
+
+            <span class="material-symbols-outlined absolute bottom-16 animate-bounce">
+                arrow_downward
+            </span>
+        </div>
+    </header>
+{% endblock %}

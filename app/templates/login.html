@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form name="login" class="mx-auto my-20 w-full px-10 md:px-0 md:max-w-sm" method="POST">
+        {{ form.hidden_tag() }}
+
+        <h1 class="font-bold text-3xl">Login</h1>
+        <p class="text-gray-700">Don't have an account? <a href="{{ url_for('register.register') }}"
+                                                           class="text-blue-600 hover:underline">Register here</a>.</p>
+
+        <div class="mt-8 flex flex-col items-center space-y-4">
+            <div class="flex flex-col w-full">
+                {{ form.email.label() }}
+                {{ form.email(class_="mt-2 px-4 py-1 border shadow-sm rounded-lg") }}
+
+                {% if form.email.errors %}
+                    {% for error in form.email.errors %}
+                        <span class="text-right text-sm text-red-600">{{ error }}</span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <div class="flex flex-col w-full">
+                {{ form.password.label() }}
+                {{ form.password(class_="mt-2 px-4 py-1 border shadow-sm rounded-lg") }}
+
+                {% if form.password.errors %}
+                    {% for error in form.password.errors %}
+                        <span class="text-right text-sm text-red-600">{{ error }}</span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            {{ form.submit(class_="py-2 px-6 bg-black rounded-xl text-white cursor-pointer") }}
+        </div>
+    </form>
+{% endblock %}

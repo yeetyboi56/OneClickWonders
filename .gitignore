@@ -1,0 +1,8 @@
+**/.DS_Store
+.venv/
+.idea/
+node_modules/
+__pycache__/
+*.iml
+.env
+app/static/css/style.css

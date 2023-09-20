@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.link-nav {
+    @apply cursor-pointer transition-colors duration-200 hover:text-gray-300
+}
+
+.a-cta-white {
+    @apply px-7 py-3 bg-white text-black rounded-xl transition-colors duration-200 hover:bg-gray-200
+}
+
+.h-hero {
+    height: calc(100dvh - 72px);
+}
