@@ -14,6 +14,7 @@
     {% endblock %}
 </head>
 <body>
+{# Navbar #}
 <div class="bg-black text-white">
     <nav class="flex justify-between max-w-screen-xl mx-auto py-5 px-10">
         <a href="{{ url_for('index.index') }}" class="font-medium text-xl md:text-2xl">One Click Wonders</a>
@@ -31,6 +32,7 @@
     </nav>
 </div>
 
+{# Flash messages #}
 {% with messages = get_flashed_messages() %}
     {% if messages %}
         <div class="flex flex-col items-center space-y-2 mt-6 px-10 mx-auto">
@@ -44,6 +46,7 @@
 {% block content %}
 {% endblock %}
 
+{# Footer #}
 <footer class="flex items-center justify-center max-w-screen-xl mx-auto py-5 px-10 text-center">
     <p class="text-gray-700 font-light">Created by Hadi Farah, Chayut Siripassorn, Dhairya Parekh.</p>
 </footer>
