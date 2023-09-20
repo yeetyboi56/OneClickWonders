@@ -24,3 +24,8 @@ You can self-host this web app by following these instructions:
 5. Run `npm run build` to build the CSS file
 6. Set environment variable `MONGODB_URI` and `SECRET_KEY` the `SECRET_KEY` can be anything that's secure.
 7. Start the server by running `gunicorn app:create_app()`. Your app should be available at [127.0.0.1:8000](http://127.0.0.1:8000/) by default.
+
+## Troubleshooting
+
+#### There's an error associated with `app.db_client.get_default_database()`
+Your MongoDB URI must contain the database name. For example, `mongodb://localhost:27017/database_name`
