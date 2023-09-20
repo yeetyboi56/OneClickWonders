@@ -7,10 +7,6 @@ from app.models import User
 login_route = Blueprint("login", __name__)
 
 
-# email: test@email.com
-# password: 123456789
-
-
 @login_route.route("/login/", methods=["GET", "POST"])
 def login():
     if session.get("email"):
