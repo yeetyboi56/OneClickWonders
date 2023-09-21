@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+    {% block additional_content %}
+    {% endblock %}
+
     <form name="{{ form_name }}" class="mx-auto my-20 w-full px-10 md:px-0 md:max-w-sm" method="POST">
         {{ form.hidden_tag() }}
 
