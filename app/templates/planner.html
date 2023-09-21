@@ -1,0 +1,20 @@
+{% extends "form.html" %}
+
+{% block additional_content %}
+    {% if route %}
+        <div class="mt-8 flex flex-col items-center space-y-4">
+            <h2 class="font-bold text-2xl">Route</h2>
+            <ol class="list-decimal">
+                {% for narrative in route %}
+                    <li>{{ narrative }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <div class="mt-8 flex flex-col items-center space-y-4">
+            <span class="px-4 py-2 bg-red-600 text-white">{{ error }}</span>
+        </div>
+    {% endif %}
+{% endblock %}
