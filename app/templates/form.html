@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form name="{{ form_name }}" class="mx-auto my-20 w-full px-10 md:px-0 md:max-w-sm" method="POST">
+        {{ form.hidden_tag() }}
+
+        <h1 class="font-bold text-3xl">{{ form_title }}</h1>
+        {% if form_sub %}
+            <p class="text-gray-700">{{ form_sub }} <a href="{{ form_sub_link_href }}"
+                                                       class="text-blue-600 hover:underline">{{ form_sub_link_text }}</a>.
+            </p>
+        {% endif %}
+
+        <div class="mt-8 flex flex-col items-center space-y-4">
+            {% for field in form_fields %}
+                <div class="flex flex-col w-full">
+                    {{ field.label() }}
+                    {{ field(class_="mt-2 px-4 py-1 border shadow-sm rounded-lg") }}
+
+                    {% if field.errors %}
+                        {% for error in field.errors %}
+                            <span class="text-right text-sm text-red-600">{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            {{ field_submit(class_="py-2 px-6 bg-black rounded-xl text-white cursor-pointer") }}
+        </div>
+    </form>
+{% endblock %}

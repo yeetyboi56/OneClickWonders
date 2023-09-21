@@ -31,7 +31,18 @@ def login():
 
         flash("Login credentials are not correct")
 
-    return render_template("login.html", title="Login", form=form)
+    return render_template(
+        "form.html",
+        title="Login",
+        form=form,
+        form_name="login",
+        form_title="Login",
+        form_sub="Don't have an account?",
+        form_sub_link_href=url_for("register.register"),
+        form_sub_link_text="Register here",
+        form_fields=[form.email, form.password],
+        field_submit=form.submit
+    )
 
 
 @login_route.route("/logout/")
