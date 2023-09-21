@@ -1,4 +1,4 @@
-![One Click Wonders Banner](https://user-images.githubusercontent.com/108072497/268628903-8cccdf2d-5b04-412a-97a7-4d497c6e1294.png)
+![City cruise banner](https://github.com/yeetyboi56/OneClickWonders/assets/108072497/a54152a1-08ea-4dd6-afef-6246804c5059)
 
 # City Cruise
 
