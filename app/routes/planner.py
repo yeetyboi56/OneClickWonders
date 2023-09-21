@@ -38,13 +38,18 @@ def planner():
 
         data = response.json()
 
+        # This checks if the route was found
         if data.get("info") and data.get("info").get("statuscode") == 0:
             route: dict = data.get("route")
 
+            # The API returns a list of legs containing a list of maneuvers
+            # We sort the route dict by the index key's value
             legs = sorted(route.get("legs"), key=lambda d: d.get("index"))
 
+            # We get each maneuver from the first leg and sort them by their index key's value
             maneuvers = sorted(legs[0].get("maneuvers"), key=lambda d: d.get("index"))
 
+            # We get the narrative from each maneuver
             narratives = [maneuver.get("narrative") for maneuver in maneuvers]
 
             return render_planner_page(form, route=narratives)
