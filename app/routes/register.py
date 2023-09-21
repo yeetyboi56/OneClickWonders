@@ -27,7 +27,7 @@ def render_register_page(form: RegisterForm) -> str:
 
 @register_route.route('/register/', methods=["GET", "POST"])
 def register():
-    if session.get("email"):
+    if "email" in session:
         return redirect(url_for("index.index"))
 
     form = RegisterForm()

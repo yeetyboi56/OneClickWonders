@@ -9,7 +9,7 @@ login_route = Blueprint("login", __name__)
 
 @login_route.route("/login/", methods=["GET", "POST"])
 def login():
-    if session.get("email"):
+    if "email" in session:
         return redirect(url_for("index.index"))
 
     form = LoginForm()

@@ -22,7 +22,7 @@
         <ul class="flex space-x-5 items-center">
             <li><a href="{{ url_for('index.index') }}" class="link-nav">Home</a></li>
 
-            {% if session.get("email") %}
+            {% if "email" in session %}
                 <li><a href="{{ url_for('login.logout') }}" class="link-nav">Logout</a></li>
             {% else %}
                 <li><a href="{{ url_for('login.login') }}" class="link-nav">Login</a></li>
