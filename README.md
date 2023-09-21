@@ -4,13 +4,6 @@
 
 One Click Wonders is a route planner app made to ease transportation experience in UberLand. It provides seamless integration between public transport and ridesharing.
 
-## Features (planned)
-
-- Easy journey planning
-- Real-Time Updates: Stay informed about transit schedules, delays, and ride status.
-- Affordable Fares
-- Safety First
-
 ## Self Hosting
 
 ### Requirements
