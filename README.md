@@ -1,8 +1,8 @@
 ![One Click Wonders Banner](https://user-images.githubusercontent.com/108072497/268628903-8cccdf2d-5b04-412a-97a7-4d497c6e1294.png)
 
-# One Click Wonders
+# City Cruise
 
-One Click Wonders is a route planner app made to ease transportation experience in UberLand. It provides seamless integration between public transport and ridesharing.
+City Cruise is a route planner app made to ease transportation experience in UberLand. It provides seamless integration between public transport and ridesharing.
 
 ## Self Hosting
 

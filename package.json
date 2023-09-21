@@ -1,5 +1,5 @@
 {
-  "name": "one-click-wonders",
+  "name": "city-cruise",
   "version": "1.0.0",
   "scripts": {
     "build": "npx tailwindcss -i ./input.css -o ./app/static/css/style.css",
