@@ -5,6 +5,7 @@ from pymongo import MongoClient
 
 from app.routes.index import index_route
 from app.routes.login import login_route
+from app.routes.planner import planner_route
 from app.routes.register import register_route
 
 
@@ -20,5 +21,6 @@ def create_app():
     app.register_blueprint(index_route)
     app.register_blueprint(login_route)
     app.register_blueprint(register_route)
+    app.register_blueprint(planner_route)
 
     return app

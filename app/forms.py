@@ -15,3 +15,10 @@ class RegisterForm(FlaskForm):
     password_confirm = PasswordField("Confirm Password", validators=[InputRequired(), Length(min=8),
                                                                      EqualTo("password", "Passwords must match.")])
     submit = SubmitField("Register")
+
+
+class PlannerForm(FlaskForm):
+    start = StringField("Start", validators=[InputRequired(), Length(8, 256)])
+    end = StringField("End", validators=[InputRequired(), Length(8, 256)])
+
+    submit = SubmitField("Plan Route")
